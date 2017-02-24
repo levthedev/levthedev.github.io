@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../css/writing.css">
+    <link rel="shortcut icon" type="image/png" href="../favicon.png"/>
+    <title>Lev</title>
+  </head>
+  <body>
+    <div class="writing">
+      <a href="../projects.html" id="back">Back</a>
+      <h1>Opentrons</h1>
+      <span id="date">2016-2017</span>
+      <p>At the beginning of 2016, I joined <a href="https://opentrons.com">Opentrons</a>, a Y-Combinator backed startup that builds robots for biologists.</p>
+      <hr>
+      <p>While working at Opentrons I worked on a number of engineering projects. The first project I worked on was an optimization of the company's marketing website - I reduced HTML and CSS by 80% and load times by 80% (from 5+ seconds to ~1 second) and fixed a number of cross browser bugs that lowered our bounce rate, raised our conversion rate, and decreased support tickets.</p>
+      <p>The next project that I worked on was an overhaul of the main user-facing app. This app allows users to connect, calibrate, and control their robot for automating the pipetting of tiny amounts of liquid. The old app's repository can be found <a href="https://github.com/OpenTrons/otone_frontend">here</a>, and the new repository that contains the redo of the app that I led can be found <a href="https://github.com/OpenTrons/opentrons-app">here</a>.</p>
+      <p>The original app was written in plain HTML, CSS, and Javascript, and was buggy and difficult to maintain. It communicated over an ethernet cable to a Raspberry Pi that contained the backend code for sending singals to a Smoothieboard which physically controlled the robot. The refactor that I did initally removed the need for a Raspberry Pi by bundling a Python executeable that contained the backend server into the frontned. The removal of the Raspberry Pi reduced startup times of the robot from 3-5 minutes to 5-10 seconds, and the removal of the Ethernet cable in favor of a serial connection reduced customer support tickets by around 50% (the serial connection was far more reliable and cross OS compatible).</p>
+      <p>I also packaged the frontend into an Electron app, which eliminated cross browser compatibility issues, allowed us to auto-update the app, and gave us access to some neat OS specific actions, like the right-click context menu and the filebar.</p>
+      <hr>
+      <p>After dealing with the major issues of customers being unable to connect to their robot, slow startup times for the robot, and browser cross compatability issues, I next focused on a more complete rewrite of the app. This rewrite introduced a completely overhauled UI, made the app much easier to maintain and reason about, reduced code bloat, and added a number of integration and unit tests.</p>
+      <p>I rewrote the app using <a href="https://vuejs.org">Vue</a>, a wonderful frontend framework. This allowed me to split the UI up into components and manage state with <a href="https://vuex.vuejs.org/en/">Vuex</a>, a Redux-like state management library. I wrote unit and integration tests for the Vue components and Electron modules in Chai, Mocha, Karma, and Spectron.</p>
+      <hr>
+      <p>While rewriting the main app, I worked with a team of other engineers to rewrite the backend framework that allows users to write custom "Protocols" for science experiments. It basically is a Python API that allows users to write sequences of commands that control the robot. Below is an example of what this means.</p>
+      <pre>
+        <code>
+          p200.pick_up_tip(p200_rack['A1'])
+          p200.aspirate(100, plate['A1']).dispense(50, plate['D1'])
+          p200.distribute(100, plate.wells('A2'), plate.rows('1', to='12'))
+          p200.drop_tip(p200_rack['A1'])
+        </code>
+      </pre>
+      <p>This was an incredible project to work on for a number of reasons. For one, it was a large and complex Python project that communicated over serial connection to a Smoothieboard, meaning I got to learn a lot of new concepts that I never would have otherwised been exposed to. Another fascinating aspect of this project was the API design itself - there was an interesting challenge in writing a Python API for non-programmer scientists that had to be self explanatory and concise, yet expressive and powerful enough to actually carry out real science experiments.</p>
+      <p>I was at Opentrons for about a year, and I both learned an insane amount of information and contributed a ton of interesting code. Also, we got <a hre="https://www.researchgate.net/publication/293634329_FusX_A_rapid_one-step_TALE_assembly_system_for_genome_science">featured in a research paper</a> by the Mayo Clinic! I suppose that's another item off the bucket list.</p>
+    </div>
+  </body>
+</html>

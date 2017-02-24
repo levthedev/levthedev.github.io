@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../css/writing.css">
+    <link rel="shortcut icon" type="image/png" href="../favicon.png"/>
+    <title>Lev</title>
+  </head>
+  <body>
+    <div class="writing">
+      <a href="../projects.html" id="back">Back</a>
+      <h1>Paralela</h1>
+      <span id="date">January 2017</span>
+      <p><a href="https://parale.la">Paralela</a> was the first MVP that I built as part of a 12 MVPs in 12 months project that I've started in 2017. This 12 in 12 idea was largely inspired by <a href="https://levels.io">Pieter Levels</a>, creator of <a href="https://nomadlist.com">NomadList</a> and <a href="https://remoteok.io">RemoteOK</a>.</p>
+      <p><a href="https://parale.la">Paralela</a> is a fun new way to practice your foreign language skills. It has you type out sentences in the language you are learning or brushing up on, and then shows you a live translation of the words as you type them. Then, the next day, you get an email with the important vocab from the prior day's lessons. Below is an example of the typing aspect.</p>
+      <img src="../demo.gif"></img>
+      <p>Paralela was an experiment in a number of ways for me. It was the first app that I've built outside of company time that charges users money, and it also is (as far as I can tell) the first Pay What You Want SaaS. I chose this revenue model mostly out of curiosity - what would people pay on average? Would anyone even buy it? Would it be too confusing for people?</p>
+      <p>The answers to those questions are, in order, $2.50, yes, and no. Meaning that I actually had paying customers, they paid a bit above the minimum of $1, and no customers were confused about the payment model (non-customers, on the other hand, were quite vocal about how terrible of an idea they thought it was).</p>
+      <p>Getting my first paying customer ever was an exhilirating feeling - even though this project didn't generate enough revenue to convince me to spend more time marketing it or building out features, it still is an amazing feeling to get that first Stripe notification that a total stranger (from halfways across the country), has decided to pay you actual money.</p>
+      <h3>Marketing</h3>
+      <p>For marketing, I did a number of "launches" on different forums, as well as a small paid ad campaign. Below is a list of places that I launched.</p>
+      <ul>
+        <li><a href="https://www.reddit.com/r/French/comments/5rh0xs/i_built_a_website_to_help_you_learn_french_vocab/">/r/french - 43 upvotes</a></li>
+        <li><a href="https://www.reddit.com/r/FrenchImmersion/comments/5r9xtc/i_built_a_website_to_help_you_learn_french_vocab/">/r/frenchimmersion - 22 upvotes</a></li>
+        <li><a href="https://news.ycombinator.com/item?id=13535176#13551397">HackerNews - 11 upvotes</a></li>
+        <li><a href="https://www.reddit.com/r/learnfrench/comments/5r9rup/paralela_a_place_to_practice_french_and_get_daily/">/r/learnfrench - 8 upvotes</a></li>
+        <li><a href="https://www.producthunt.com/posts/paralela">ProductHunt - 8 upvotes</a></li>
+        <li><a href="https://www.indiehackers.com/forum/post/-KbpitwAoMk68TIJsWKm">IndieHackers - 7 upvotes</a></li>
+        <li><a href="https://barnacl.es/s/yri8eo/thoughts_on_pay_what_you_want_saas">Barnacl.es - 4 upvotes</a></li>
+      </ul>
+      <p>In total, I recieved just over 100 upvotes.</p>
+      <p>I paid $20 for 2 Reddit advertisement campaigns. I mostly did this for A/B testing and to try doing some ad campaigns, as I had never done any paid ad campaigns before. You can see the two ads below.</p>
+      <img src="../ads.png"></img>
+      <p>I tried 2 strategies with these Reddit ads. 1 ad was just the Paralela logo and had more information about the price and the product, and the other ad was a picture of me smiling with almost no information besides the fact that the product was for helping with French skills. As you can see in the screenshots below, the ad with my face did much better. It had a 0.66% CTR, while the more generic and informative as had only a 0.2% CTR.</p>
+      <img src="../ad_impression1.png"></img>
+      <img src="../ad_impression2.png"></img>
+      <p>In terms of how that actually related to clicks, the below Google Analytics graph gives some insight.</p>
+      <h3>Statistics</h3>
+      <img src="../analytics.jpg"></img>
+      <p>You can see that there is an initial spike of a few hundred users - about 200 came from Reddit, another 100 from IndieHackers, 60 from HackerNews, 10 from ProductHunt, and about 100 others from various sources without a referral URL.</p>
+      <p>After this initial spike, there is very little traffic for about 2 weeks, and the suddenly, there is another spike. This spike has a referral source of Tumblr, though I still haven't actually found who shared the link.</p>
+      <p>In total, as of 2/24/17, there have been about 700 sessions, 600 users, and 1600 pageviews. The average session duration is 50 seconds, which is very high - I believe this is because the demo takes about a minute to complete. You can also see that about 90% of my traffic was from English speaking countries, but 10% was from a mixture of French, Spanish, and German speaking countries. Lastly, about a quarter of my traffic was on mobile, which is unfortunate - Paralela is not responsive and is actually quite unuseable on mobile. In the future, focusing on responsive design and internationalization early on could help 30% of my users who are on their phones or are not English speakers.</p>
+      <h3>Tech</h3>
+      <p>I built Paralela with <a href="https://sinatrarb.com">Sinatra</a> (my favorite micro server framework) and vanilla Javascript (that's right, no Webpack, no ES2017, no React, no Node, no Express, no ES2055, nothing). I hosted the server on a cheap Heroku instance, although in retrospect, I wish that I had just used DigitalOcean (cheaper, more control).</p>
+      <h3>Conclusion</h3>
+      <p>I feel ok about Paralela - not great but not bad either. I made my first every paying customers, I got around 100 upvotes in forums, had about 1000 visitors to the site and 2000 page views, and ran a paid ads campaign for the first time. Paralela is nowhere near <a href="http://www.paulgraham.com/ramenprofitable.html">ramen profitable</a>, but is a good first step for me on my journey to finding a product that sticks.</p>
+      <p>If you're interested, you can check out Paralela <a href="https://parale.la">here</a>.</p>
+    </div>
+  </body>
+</html>

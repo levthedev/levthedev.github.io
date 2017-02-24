@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../css/writing.css">
+    <link rel="shortcut icon" type="image/png" href="../favicon.png"/>
+    <title>Lev</title>
+  </head>
+  <body>
+    <div class="writing">
+      <a href="../projects.html" id="back">Back</a>
+      <h1>Gif</h1>
+      <span id="date">April 4th, 2016</span>
+      <p><a href="http://github.com/levthedev/gif">Gif</a> is a Ruby Gem that plays gifs in your terminal. First, it fetches a gif using <a href="https://github.com/Giphy/GiphyAPI">Giphy's API</a>. The response from the API includes a link to an S3 bucket that I fetch with cURL (stored in a temporary directory). This gif is then unoptimized to include only 256 colors (the most colors that iTerm supports) and resized to fill the Terminal window height and width.</p>
+      <p>Next, I split up the gif into individual frames using <a href="https://www.lcdf.org/gifsicle">gifsicle</a>, a neat gif manipulation tool. I decided on using gifsicle and not <a href="https://imagemagick.org">ImageMagick</a> because even though many ImageMagick is more popular, it requires a special version (with X11) to manipulate gifs. Asking users to uninstall a package they already have and then reinstall a special version of said package seemed a bit much. Thus, gifsicle.</p>
+      <p>Finally, I display each frame in the Terminal using <a href="https://github.com/eddieantonio/imgcat">imgcat</a>, a tool that is "like cat, but for images". It displays images in the Terminal by converting JPEGS into matrices of colored spaces. In iTerm, I don't need to use imgcat, and just display gifs natively. </p>
+      <p>You can check out the GitHub repository for it <a href="https://github.com/levthedev/gif">here</a>.</p>
+    </div>
+  </body>
+</html>

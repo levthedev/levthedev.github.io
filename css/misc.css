@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+body {
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+
+* {
+  /*outline: 1px solid red !important;*/
+}
+
+#wrapper {
+  width: 100vw;
+  height: 80vh;
+  margin-top: 100px;
+}
+
+#text {
+  width: 500px;
+  margin: 0 auto;
+}
+
+a {
+  font-size: 18px;
+  text-decoration: none;
+  color: mediumpurple;
+}
+
+a:hover {
+  color: white;
+  background-color: mediumpurple;
+}
