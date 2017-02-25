@@ -46,3 +46,10 @@ a:hover {
 #date {
   color: grey;
 }
+
+@media only screen and (max-width: 650px) {
+  .writing, img {
+    width: 80vw;
+    min-width: 100px;
+  }
+}

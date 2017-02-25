@@ -5,10 +5,6 @@ body {
   font-family: 'Roboto Mono', monospace;
 }
 
-* {
-  /*outline: 1px solid red !important;*/
-}
-
 #wrapper {
   width: 100vw;
   height: 80vh;
@@ -67,4 +63,11 @@ a:hover {
 #back {
   margin-left: 0px;
   padding: 0px;
+}
+
+@media only screen and (max-width: 650px) {
+  #contact {
+    width: 80vw;
+    min-width: 100px;
+  }
 }
