@@ -37,8 +37,9 @@ a:hover {
 
 .date {
   color: dimgrey;
-  width: 190px;
+  width: 225px;
   padding: 2px;
+  font-size: 18px;
 }
 
 .title {
