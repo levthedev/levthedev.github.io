@@ -2,7 +2,9 @@
 
 body {
   margin: 0;
-  font-family: 'Roboto Mono', monospace;
+}
+
+h1, h2, #back, #date {
 }
 
 h1, h2 {
@@ -32,6 +34,9 @@ img {
   margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 25px;
+  font-family: 'Georgia', Cambria, "Times New Roman",Times,serif;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 a {
@@ -46,6 +51,11 @@ a:hover {
 
 #date {
   color: grey;
+}
+
+.imageDescription {
+  font-style: italic;
+  font-size: 16px;
 }
 
 @media only screen and (max-width: 650px) {
