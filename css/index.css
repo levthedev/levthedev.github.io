@@ -7,7 +7,7 @@ body {
 
 #wrapper {
   width: 100vw;
-  height: 80vh;
+  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,6 +64,35 @@ a:hover {
 #back {
   margin-left: 0px;
   padding: 0px;
+}
+
+#nlDesc {
+  font-size: 12px;
+  font-style: italic;
+  width: 225px;
+  margin: 0 auto;
+  font-weight: 100;
+}
+
+input[type="submit"] {
+  padding: 10px;
+  outline: none;
+  border: 1px solid mediumpurple;
+  border-radius: 2px;
+  background-color: white;
+  color: mediumpurple;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: mediumpurple;
+  color: white;
+}
+
+input[type="text"] {
+  padding: 5px;
 }
 
 @media only screen and (max-width: 650px) {
